@@ -1,42 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speed Quest</title>
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-
-    <script defer type="module" src="src/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
 </head>
-
 <body>
-    <header class="header bg-dimBlue ">
-        <div class="container">
-            <h1>SpeedQuest</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <div class="inner-container">
+            <div class="health player-health">
+                <div class="health-bar"></div>
+                <div id="playerHealth" class="health-fill"></div>
+            </div>
+            <div id="timer" class="timer">10</div>
+            <div class="health enemy-health">
+                <div class="health-bar"></div>
+                <div id="enemyHealth" class="health-fill"></div>
+            </div>
         </div>
-    </header>
-    <main>
-        <canvas id="gameCanvas"></canvas>
-    </main>
-    <footer class="footer bg-dimBlue">
-        <div class="container">
-            <span class="text-muted">© 2024 SpeedQuest. All rights reserved.</span>
-        </div>
-    </footer>
-</body>
+        <div id="displayText" class="display-text">Tie</div>
+        <canvas></canvas>
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="src/index.js"></script>
+</body>
 </html>
+
