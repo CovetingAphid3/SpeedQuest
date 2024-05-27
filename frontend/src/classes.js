@@ -57,6 +57,7 @@ export class Sprite {
 
 export class Fighter extends Sprite {
     constructor({
+        score = 0,
         position,
         velocity,
         color = 'red',
@@ -74,7 +75,7 @@ export class Fighter extends Sprite {
             framesMax,
             offset
         })
-
+        this.score = score
         this.velocity = velocity
         this.width = 50
         this.height = 150

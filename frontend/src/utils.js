@@ -10,6 +10,7 @@ export function rectangularCollision({ rectangle1, rectangle2 }) {
   )
 }
 
+
 export function determineWinner({ player, enemy, timerId }) {
   clearTimeout(timerId)
   document.querySelector('#displayText').style.display = 'flex'
